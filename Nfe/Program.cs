@@ -2,11 +2,17 @@
 
 namespace Nfe
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var item = new enviNFeNFeInfNFeDetProd { cProd = 1, CFOP = 5405, qCom = 1 };
+
+            var cabecalho = new enviNFe { versao = 4 };
+            var xml = GerarXml<enviNFe>.Serialize(cabecalho);
+
+            Console.WriteLine(xml);
+            Console.ReadLine();
         }
     }
 }
