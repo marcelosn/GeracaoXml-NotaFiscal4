@@ -1,4 +1,6 @@
-﻿[System.SerializableAttribute()]
+﻿using System.Collections.Generic;
+
+[System.SerializableAttribute()]
 [System.ComponentModel.DesignerCategoryAttribute("code")]
 [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://www.portalfiscal.inf.br/nfe")]
 public partial class enviNFeNFeInfNFe
@@ -11,7 +13,7 @@ public partial class enviNFeNFeInfNFe
 
     private enviNFeNFeInfNFeAutXML[] autXMLField;
 
-    private enviNFeNFeInfNFeDet detField;
+    private List<enviNFeNFeInfNFeDet> detField;
 
     private enviNFeNFeInfNFeTotal totalField;
 
@@ -77,7 +79,7 @@ public partial class enviNFeNFeInfNFe
     }
 
     /// <remarks/>
-    public enviNFeNFeInfNFeDet det
+    public List<enviNFeNFeInfNFeDet> det
     {
         get
         {
